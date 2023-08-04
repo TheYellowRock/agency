@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from 'next/image'
-import logo from "../../public/YellowRockLogo.png"
+import Image from "next/image";
+import logo from "../../public/YellowRockLogo.png";
+import { motion } from "framer-motion";
 
 const navigation = [
   { name: "The Offer", href: "/offer" },
@@ -18,35 +19,67 @@ export default function Header() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-grayT ring-1 ring-yellowT hover:ring-lightBlue">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1 }}
+              className="relative rounded-full px-3 py-1 text-sm leading-6 text-grayT ring-1 ring-yellowT hover:ring-lightBlue"
+            >
               More flexibility, more control, more possibilities..{" "}
-              <a href="#" className="font-semibold text-yellowT hover:text-lightBlue ">
+              <a
+                href="#"
+                className="font-semibold text-yellowT hover:text-lightBlue "
+              >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
-            </div>
+            </motion.div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-grayT sm:text-6xl">
-              <span className="text-lightBlue">Headless commerce</span> The <span className="text-yellowT">future</span> of online shopping.
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-grayT">
-              If you're looking for a headless ecommerce solution that's easy to
-              use and affordable, then look no further.
-            </p>
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              className="text-4xl font-bold tracking-tight text-grayT sm:text-6xl"
+            >
+              <span className="text-lightBlue">Headless commerce</span> The{" "}
+              <span className="text-yellowT">future</span> of online shopping.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1 }}
+              className="mt-6 text-lg leading-8 text-grayT"
+            >
+              If you&apos;re looking for a headless ecommerce solution
+              that&apos;s easy to use and affordable, then look no further.
+            </motion.p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.8 }}
                 href="#"
                 className="relative rounded-full bg-yellowT px-6 py-2 text-sm font-semibold  leading-6 text-darkBlue ring-1 ring-yellowT hover:bg-lightBlue hover:ring-lightBlue"
               >
                 Get started
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.8 }}
                 href="#"
                 className="text-sm font-semibold leading-6 text-yellowT hover:text-lightBlue"
               >
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>
@@ -65,16 +98,20 @@ export function NavBar() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
+              href="/"
+              className="-m-1.5 p-1.5"
+            >
               <span className="sr-only">Yellow Rock Agency</span>
-              <Image 
+              <Image
                 src={logo}
                 alt="Yellow Rock Agency"
                 width={150}
                 height={150}
               />
-
-            </a>
+            </motion.a>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -88,22 +125,25 @@ export function NavBar() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <motion.a
+                whileHover={{ scale: 1.2 }}
                 key={item.name}
                 href={item.href}
                 className="text-sm font-semibold leading-6 text-grayT hover:text-yellowT"
               >
                 {item.name}
-              </a>
+              </motion.a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               href="https://calendly.com/yellowrock-agency/30min"
               className="relative rounded-full bg-yellowT px-6 py-2 text-sm font-semibold  leading-6 text-darkBlue ring-1 ring-yellowT hover:bg-lightBlue hover:ring-lightBlue"
             >
               Book a Meeting <span aria-hidden="true">&rarr;</span>
-            </a>
+            </motion.a>
           </div>
         </nav>
         <Dialog

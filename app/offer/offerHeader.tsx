@@ -47,7 +47,7 @@ export default function OfferHeader() {
             The future is here. We can help you get there.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            We'll help you make the move to headless commerce with ease. So you can focus on what matters most: your customers.
+            We&apos;ll help you make the move to headless commerce with ease. So you can focus on what matters most: your customers.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a

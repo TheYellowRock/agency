@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function CTABooking() {
   return (
     <div className="bg-gradient-to-b from-normalBlue to-lightBlue">
@@ -14,12 +17,14 @@ export default function CTABooking() {
             bring to your business.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
               href="https://calendly.com/yellowrock-agency/30min"
               className="relative rounded-full bg-yellowT px-6 py-2 text-sm font-semibold  leading-6 text-darkBlue ring-1 ring-yellowT hover:bg-grayT hover:ring-lightBlue"
             >
               Book your meeting Now <span aria-hidden="true">&rarr;</span>
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
