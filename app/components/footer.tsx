@@ -1,11 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 const navigation = {
   offer: [
-    { name: "Our Mission", href: "#" },
-    { name: "Performance", href: "#" },
+    { name: "Our Mission", href: "/offer#Our_Offer" },
+    { name: "Performance", href: "/offer#Performance" },
     { name: "SEO", href: "#" },
     { name: "Lead Generation", href: "#" },
   ],
@@ -44,12 +45,12 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.offer.map((item) => (
                     <li key={item.name}>
-                      <a
+                      <Link
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

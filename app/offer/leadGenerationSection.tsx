@@ -4,51 +4,49 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import performanceIllustration from "../../public/Data extraction-bro.png";
+import leadGenerationIllustration from "../../public/Generating new leads-pana.png";
 
 const features = [
   {
-    name: "Reduced page load times",
+    name: "Content marketing:",
     description:
-      "Headless architecture can reduce page load times by decoupling the front-end from the back-end. This allows the front-end to be rendered on a different server than the back-end, which can free up the back-end to focus on processing data and serving requests.",
+      " We can help you create high-quality content that attracts your target audience and captures their contact information.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "Improved scalability",
+    name: "Social media marketing:",
     description:
-      "Headless architecture can improve scalability by allowing for the use of different front-end frameworks for different devices and browsers. This can help to ensure that the user experience is optimized for each platform, and it can also make it easier to scale the website or application to handle more traffic.",
+      "We can help you use social media to reach your target audience and generate leads.",
     icon: LockClosedIcon,
   },
   {
-    name: "Enhanced security",
+    name: "Referral marketing:",
     description:
-      "Headless architecture can enhance security by isolating the front-end from the back-end. This can help to protect the back-end from attacks that target the front-end, and it can also make it easier to update the front-end without affecting the back-end.",
+      "We can help you create a referral program that encourages your current customers to refer their friends and colleagues to your business.",
     icon: ServerIcon,
   },
 ];
 
-export default function PerformanceSection() {
+export default function LeadGenerationSection() {
   return (
     <div className="bg-gradient-to-b from-normalBlue to-lightBlue py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            A better Performance
+            Generate New Leads
           </p>
           <p className="mt-6 text-lg leading-8 text-darkBlue">
-            Headless architecture can improve performance in a number of ways.
-            First, by decoupling the front-end from the back-end, headless
-            architecture allows for more efficient use of resources. The
-            front-end can be rendered on a different server than the back-end,
-            which can free up the back-end to focus on processing data and
-            serving requests.
+            We know that lead generation can be a challenge, but we're here to
+            help. We have a team of experienced professionals who can help you
+            create and execute a lead generation strategy that's right for your
+            business.
           </p>
         </div>
       </div>
       <div className="relative overflow-hidden pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Image
-            src={performanceIllustration}
+            src={leadGenerationIllustration}
             alt="Product screenshot"
             className="mx-auto"
             width={900}

@@ -111,10 +111,10 @@ export default function Features() {
           viewport={{ once: true, amount: 0.8 }}
           className="mx-auto max-w-2xl"
         >
-          <h2 className="text-3xl text-center font-bold tracking-tight text-normalBlue sm:text-4xl">
+          <h2 className="text-5xl text-center font-header text-normalBlue sm:text-5xl xl:text-6xl">
             The future is headless
           </h2>
-          <p className="mt-6 text-lg text-center leading-8 text-darkBlue">
+          <p className="mt-6 text-lg lg:text-xl xl:text-2xl font-header text-center leading-8 text-darkBlue">
             A way to future-proof your ecommerce business and ensure that your
             business can adapt to changing market conditions and customer
             expectations.
@@ -129,20 +129,20 @@ export default function Features() {
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.8 }}
                 key={feature.name}
-                className="flex flex-col"
+                className="flex flex-col p-2 "
               >
-                <dt className="text-base font-semibold leading-7 text-darkBlue">
+                <dt className="text-3xl font-header leading-7 py-2 lg:py-4 text-lightBlue">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-yellowT">
                     <feature.icon aria-hidden="true" />
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-900">
-                  <p className="flex-auto">{feature.description}</p>
+                <dd className="mt-1 flex flex-auto flex-col text-base lg:text-lg leading-7 text-gray-900">
+                  <p className="flex-auto font-header">{feature.description}</p>
                   <p className="mt-6">
                     <a
                       href={feature.href}
-                      className="text-sm font-semibold leading-6 text-lightBlue hover:text-yellowT"
+                      className="text-base font-header font-semibold leading-6 text-lightBlue hover:text-skyBlue"
                     >
                       Learn more <span aria-hidden="true">→</span>
                     </a>

@@ -1,10 +1,15 @@
+import Footer from "../components/footer";
 import { NavBar } from "../components/header";
+import CTAOffer from "../offer/ctaOffer";
+import Legal from "./legal";
 
 export default function TheAgency() {
     return(
         <>
             <NavBar />
-            <h1 className="text-white">The Agency?</h1>
+            <Legal />
+            <CTAOffer />
+       
         </>
     )
 }

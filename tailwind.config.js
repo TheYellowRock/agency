@@ -44,15 +44,21 @@ module.exports = {
         },
         fontFamily: {
           sans: ['var(--font-inter)'],
-          header: 'Ephesis',
+          header: 'Eczar',
           paris: 'Parisienne'
         },
         colors: {
-          darkBlue: '#003963',
-          normalBlue: '#008ec5',
-          lightBlue: '#4bc4f1',
-          yellowT: '#fcd037',
-          grayT: '#e5e5e5'
+          //darkBlue: '#003963',
+          darkBlue: '#181e20',
+          //normalBlue: '#008ec5',
+          normalBlue: '#02314d',
+          //lightBlue: '#4bc4f1',
+          lightBlue: '#045C94',
+          skyBlue: '#4bc4f1',
+          //yellowT: '#fcd037',
+          yellowT: '#ffbb1c',
+          //grayT: '#e5e5e5'
+          grayT: '#f2f4f5'
         }
     },
   },
