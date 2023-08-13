@@ -36,9 +36,9 @@ export default function LeadGenerationSection() {
             Generate New Leads
           </p>
           <p className="mt-6 text-lg leading-8 text-darkBlue">
-            We know that lead generation can be a challenge, but we're here to
+            We know that lead generation can be a challenge, but we&apos;re here to
             help. We have a team of experienced professionals who can help you
-            create and execute a lead generation strategy that's right for your
+            create and execute a lead generation strategy that&apos;s right for your
             business.
           </p>
         </div>
